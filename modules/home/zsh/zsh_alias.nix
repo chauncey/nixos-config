@@ -8,8 +8,19 @@
 {
   programs.zsh = {
     shellAliases = {
-      # Utils
-      c = "clear";
+      cls = "clear";
+      home = "cd~";
+      hist = "history | grep $1";
+      grepex = "grep -R --exclude-dir={.git,node_modules,build} --exclude=.eslintcode";
+      wget = "wget --no-hsts";
+      bigs = "du -ah . | sort -nr | head -n 5";
+      ducks = "du -cks * | sort -nr | head";
+      
+      la = "ls -Al";
+      lx = "ls -lXB";
+      lu = "ls -lur";
+      lm = "ls -al |more";
+
       cd = "z";
       tt = "gtrash put";
       cat = "bat";
@@ -42,7 +53,7 @@
 
       # python
       piv = "python -m venv .venv";
-      psv = "source .venv/bin/activate";
+      pyenv = "source .venv/bin/activate";
     };
   };
 }

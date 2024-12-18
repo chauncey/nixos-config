@@ -3,8 +3,18 @@
   programs.git = {
     enable = true;
 
-    userName = "Frost-Phoenix";
-    userEmail = "67cyril6767@gmail.com";
+    userName = "chauncey";
+    userEmail = "cchauncey@gmail.com";
+
+    aliases = {
+      st = "status -sb";
+      co = "checkout";
+      cob = "checkout -b";
+      cot = "checkout --track";
+      can = "commit --amend --no-edit";
+      unadd = "reset HEAD";
+      br = "branch";
+    };
 
     extraConfig = {
       init.defaultBranch = "main";
